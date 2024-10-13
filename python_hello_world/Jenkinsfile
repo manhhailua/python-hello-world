@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building..'
+        echo "Parameter start_time: ${params.start_time}"
+        echo "Parameter end_time: ${params.end_time}"
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Testing..'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying....'
+      }
+    }
+  }
+}
