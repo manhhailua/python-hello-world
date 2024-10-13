@@ -7,6 +7,8 @@ pipeline {
         echo 'Building..'
         echo "Parameter start_time: ${params.start_time}"
         echo "Parameter end_time: ${params.end_time}"
+        sh 'python --version'
+        sh 'python python_hello_world/main.py'
       }
     }
     stage('Test') {
